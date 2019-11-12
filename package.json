@@ -1,0 +1,14 @@
+{
+	"scripts": {
+		"test": "jest"
+	},
+	"name": "jesttesting",
+	"description": "We are creating a test suite to test functionallity of our Calculator class.",
+	"version": "1.0.0",
+	"main": "calculator.js",
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^24.9.0"
+	}
+}
