@@ -37,7 +37,15 @@ describe("Calculator", () => {
   });
 
   test("has function called `rpn` that evaluates an expression in reverse polish notation`", () => {
+    expect(new Calculator().rpn("1 -2 +")).toBe(-1);
+  });
+
+  test("has function called `rpn` that evaluates an expression in reverse polish notation`", () => {
     expect(new Calculator().rpn("1 2 + 7 - 2 *")).toBe(-8);
+  });
+
+  test("has function called `rpn` that evaluates an expression in reverse polish notation`", () => {
+    expect(new Calculator().rpn("1 2 2 + +")).toBe(5);
   });
 
   test("has function called `clear` that clears the `register` setting it to `0`", () => {
