@@ -23,6 +23,11 @@ describe("Calculator", () => {
     expect(new Calculator(10).divide(2).equals()).toBe(5);
   });
 
+  test("has getter on `register` called `equals` that returns `0` if parameter is empty", () => {
+    const subject = new Calculator();
+    expect(subject.equals()).toBe(0);
+  });
+
   test("has function called `rpn` that evaluates an empty expression to `0`", () => {
     expect(new Calculator().rpn()).toBe(0);
   });

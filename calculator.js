@@ -4,7 +4,11 @@ class Calculator {
   }
 
   equals() {
-    return this.value;
+    if (this.value === null || this.value === undefined) {
+      return 0;
+    } else {
+      return this.value;
+    }
   }
 
   clear() {
