@@ -21,3 +21,7 @@ To clear out the register, we need to call clear().
 
 New function rpn() takes in an expression in revese polish notation and returns the calcuated result.
 It returns `0` if nothing is passed in.
+	
+Each operation function will take a number as a parameter and equals will output the final results.
+
+To clear out the register, we need to call clear().
