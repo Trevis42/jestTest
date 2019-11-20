@@ -35,7 +35,9 @@ class Calculator {
     this.value /= num;
     return this;
   }
-  //support + _ * /
+
+  // Reverse Polish Notation Calculator:
+  // supports + _ * /
   rpn(expression) {
     let result = 0;
     let stack = [];
@@ -55,19 +57,15 @@ class Calculator {
           let var2 = stack.pop();
           let var1 = stack.pop();
           let preResult = Number(var1) + Number(var2);
-
           stack.push(preResult);
         }
-
         if (v === "-") {
           //subtraction
           let var2 = stack.pop();
           let var1 = stack.pop();
           let preResult = Number(var1) - Number(var2);
-
           stack.push(preResult);
         }
-
         if (v === "*") {
           //multiplication
           let var2 = stack.pop();
@@ -76,18 +74,15 @@ class Calculator {
 
           stack.push(preResult);
         }
-
         if (v === "/") {
           //division
           let var2 = stack.pop();
           let var1 = stack.pop();
           let preResult = Number(var1) / Number(var2);
-
           stack.push(preResult);
         }
       }
     }
-
     if (stack.length > 1) {
       return "Expression invalid (too many remaining items in stack)";
     } else {
@@ -96,4 +91,5 @@ class Calculator {
     return result;
   }
 }
-module.exports = Calculator;
+
+export default Calculator;

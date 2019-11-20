@@ -1,5 +1,5 @@
 //import Calculator from "./calculator.js";
-const Calculator = require("./calculator");
+import Calculator from "./calculator";
 
 describe("Calculator", () => {
   test("has getter on `register` called `equals", () => {
